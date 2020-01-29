@@ -67,15 +67,9 @@ class jeu(QWidget):
     super().show()
   def test(self):
      pos=0
-     
-     res=(self.validator.validate(self.ligne.text(),pos))[0]
- 
-        
+     res=(self.validator.validate(self.ligne.text(),pos))[0] 
      if(self.ligne.text()==""):
         QMessageBox.critical(self,"erreur","veuillez saisir un mot")
-
-
-
      elif(self.ligne.text()==self.mot):
        """  fermer la fenetre actuelle et ouvrir une autre
  self.jeu=jeu(6)
@@ -89,14 +83,11 @@ class jeu(QWidget):
        global numero_question
        self. f=principale(numero_question)
        self. f.show()
-       
      elif( res!=2):
-
         QMessageBox.critical(self,"erreur","veuillez saisir uniquement des lettres")
- 
      elif(self.ligne.text()!=self.mot):
-
         QMessageBox.critical(self,"mystere","mot incorrect veuillez essayer une autre foix")
+
 class principale(QWidget):
   def __init__(self,nb_questions):
     super().__init__()
@@ -114,7 +105,7 @@ cliquez sur le boutton suivant""")
       self.boutton.setText("Encore une partie ?")
     self.layout.addWidget(self.text,0,0)
     self.layout.addWidget(self.boutton,1,0,)
-    self.setFixedSize(300,300)
+    self.setFixedSize(400,300)
     self.setLayout(self.layout)
     self.boutton.clicked.connect(self.lancer)
   def  lancer(self):
