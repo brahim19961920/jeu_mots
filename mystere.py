@@ -11,9 +11,6 @@ global numero_question
 numero_question=0
 
 
-
-
-
 def melanger(mot):
  taille=len(mot)
  l=[]
